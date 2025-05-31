@@ -1,5 +1,7 @@
 package com.manager.employees.model;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,142 +12,124 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Employees")
 public class Employees {
+
+
+	@Id
+	@Column(name = "employee_id")
+	private Integer employeeId;
+
+	@Column(name = "first_name", nullable = false)
+	private String firstName;
+
+	@Column(name = "last_name", nullable = false)
+	private String lastName;
+
+	@Column(name = "email", nullable = false)
+	private String email;
+
+	@Column(name = "phone_number", nullable = false)
+	private String phoneNumber;
+
+	@Column(name = "salary", nullable = false)
+	private Integer salary;
 	
-	    @Id
-	    @Column(name = "employee_id")
-	    private Integer employeeId;
+	@Column(name = "expire_date", nullable = true)
+	private Date expireDate;
 
-	    @Column(name = "first_name", nullable = false)
-	    private String firstName;
-
-	    @Column(name = "last_name", nullable = false)
-	    private String lastName;
-
-	    @Column(name = "email", nullable = false)
-	    private String email;
-
-	    @Column(name = "phone_number", nullable = false)
-	    private String phoneNumber;
-
-	    @Column(name = "job_id", nullable = false)
-	    private String jobId;
-
-	    @Column(name = "salary", nullable = false)
-	    private Double salary;
-
-	    @Column(name = "commission_pct", nullable = false)
-	    private Double commissionPct;
-
-	    @Column(name = "manager_id", nullable = false)
-	    private Integer managerId;
-
-    
-//    @Column
-//    private Integer DEPARTMENT_ID;
-    
+	@ManyToOne
+	@JoinColumn(name = "department_id")
+	private Departments department;
 	
-    @ManyToOne
-    @JoinColumn( name="department_id" )
-    private Departments department;
+	@ManyToOne
+	@JoinColumn(name = "job_id")
+	private Jobs job;
 
+	public Employees() {
+		
+	}
+	
+	public Employees(Integer employeeId, String firstName, String lastName,
+			String email, String phoneNumber, Integer salary) {
+		super();
+		this.employeeId = employeeId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.salary = salary;
 
+	}
+	
 	public Integer getEmployeeId() {
 		return employeeId;
 	}
-
 
 	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
 	}
 
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-
 	public String getLastName() {
 		return lastName;
 	}
-
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-
-	public String getJobId() {
-		return jobId;
-	}
-
-
-	public void setJobId(String jobId) {
-		this.jobId = jobId;
-	}
-
-
-	public Double getSalary() {
+	public Integer getSalary() {
 		return salary;
 	}
 
-
-	public void setSalary(Double salary) {
+	public void setSalary(Integer salary) {
 		this.salary = salary;
 	}
-
-
-	public Double getCommissionPct() {
-		return commissionPct;
-	}
-
-
-	public void setCommissionPct(Double commissionPct) {
-		this.commissionPct = commissionPct;
-	}
-
-
-	public Integer getManagerId() {
-		return managerId;
-	}
-
-
-	public void setManagerId(Integer managerId) {
-		this.managerId = managerId;
-	}
-
 
 	public Departments getDepartment() {
 		return department;
 	}
 
-
 	public void setDepartment(Departments department) {
 		this.department = department;
+	}
+
+	public Jobs getJob() {
+		return job;
+	}
+
+	public void setJob(Jobs job) {
+		this.job = job;
+	}
+
+	public Date getExpireDate() {
+		return expireDate;
+	}
+
+	public void setExpireDate(Date expireDate) {
+		this.expireDate = expireDate;
 	}
 
 

@@ -18,9 +18,7 @@ public class Countries {
 	@Column(name = "country_name", nullable = false)
 	private String countryName;
 
-//	@Column
-//	private Integer REGION_ID;
-	
+
     @ManyToOne
     @JoinColumn(name = "region_id")
     private Regions region;

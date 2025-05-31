@@ -10,26 +10,26 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Locations")
 public class Locations {
-	
+
 	@Id
 	@Column(name = "location_id", nullable = false)
 	private Integer locationId;
 
 	@Column(name = "street_address", nullable = false)
 	private String streetAddress;
-	
+
 	@Column(name = "postal_code", nullable = false)
 	private String postalCode;
-	
+
 	@Column(name = "city", nullable = false)
 	private String city;
-	
-//	@Column
-//	private String COUNTRY_ID;
-	
-    @ManyToOne
-    @JoinColumn(name = "country_id")
-    private Countries country;
+
+	@Column(name = "state_province", nullable = false)
+	private String stateProvince;
+
+	@ManyToOne
+	@JoinColumn(name = "country_id")
+	private Countries country;
 
 	public Integer getLocationId() {
 		return locationId;
@@ -69,6 +69,14 @@ public class Locations {
 
 	public void setCountry(Countries country) {
 		this.country = country;
+	}
+
+	public String getStateProvince() {
+		return stateProvince;
+	}
+
+	public void setStateProvince(String stateProvince) {
+		this.stateProvince = stateProvince;
 	}
 
 }

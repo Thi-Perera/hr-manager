@@ -11,23 +11,20 @@ public class Departments {
 
 	@Id
 	@Column(name = "department_id", nullable = false)
-	private String departmentId;
+	private Integer departmentId;
 
 	@Column(name = "department_name", nullable = false)
 	private String departmentName;
-
-//	@Column
-//	private Integer LOCATION_ID;
 
     @ManyToOne
     @JoinColumn(name = "location_id")
     private Locations location;
 
-	public String getDepartmentId() {
+	public Integer getDepartmentId() {
 		return departmentId;
 	}
 
-	public void setDepartmentId(String departmentId) {
+	public void setDepartmentId(Integer departmentId) {
 		this.departmentId = departmentId;
 	}
 
