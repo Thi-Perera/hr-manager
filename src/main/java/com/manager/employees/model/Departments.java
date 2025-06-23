@@ -1,5 +1,7 @@
 package com.manager.employees.model;
 
+import org.springframework.data.redis.core.RedisHash;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -7,6 +9,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
+@RedisHash(value = "Departments") 
 public class Departments {
 
 	@Id

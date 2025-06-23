@@ -29,7 +29,7 @@ public class EmployeeRepositoryCustomImpl implements EmployeeRepositoryCustom {
 		str1.append(
 				"SELECT new com.manager.employees.model.Employees(e.employeeId, e.firstName, e.lastName, e.email, e.phoneNumber, e.salary) FROM Employees e WHERE 1=1 and e.expireDate is null ");
 		Map<String, Object> params = new HashMap<>();
-		if (!filters.getFirstName().isEmpty()) {
+		if (!(filters.getFirstName()== "" || filters.getFirstName() == null)) {
 			str1.append(" and e.firstName LIKE :firstName ");
 			params.put("firstName", filters.getFirstName());
 		}
@@ -38,19 +38,19 @@ public class EmployeeRepositoryCustomImpl implements EmployeeRepositoryCustom {
 			params.put("max", filters.getSalaryMax() == null ? 999999999 : filters.getSalaryMax());
 			params.put("min", filters.getSalaryMin() == null ? 0 : filters.getSalaryMin());
 		}
-		if (!filters.getDepartmentName().isEmpty()) {
+		if (!(filters.getDepartmentName() == "" || filters.getDepartmentName() == null)) {
 			str1.append(" and e.department.departmentName = :departmentName");
 			params.put("departmentName", filters.getDepartmentName());
 		}
-		if (!filters.getStreetAddress().isEmpty()) {
+		if (!(filters.getStreetAddress()== "" || filters.getStreetAddress() == null)) {
 			str1.append(" and e.department.location.streetAddress = :streetAddress");
 			params.put("streetAddress", filters.getStreetAddress());
 		}
-		if (!filters.getCountryName().isEmpty()) {
+		if (!(filters.getCountryName()== "" || filters.getCountryName() == null)) {
 			str1.append(" and e.department.location.country.countryName = :countryName");
 			params.put("countryName", filters.getCountryName());
 		}
-		if (!filters.getRegionName().isEmpty()) {
+		if (!(filters.getRegionName()== "" || filters.getRegionName() == null)) {
 			str1.append(" and e.department.location.country.region.regionName = :regionName");
 			params.put("regionName", filters.getRegionName());
 		}

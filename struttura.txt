@@ -1,0 +1,194 @@
+Elenco del percorso delle cartelle per il volume Windows
+Numero di serie del volume: 2CE0-F3B4
+C:.
+|   .classpath
+|   .factorypath
+|   .gitattributes
+|   .gitignore
+|   .project
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   pom.xml
+|   struttura.txt
+|   
++---.mvn
+|   \---wrapper
+|           maven-wrapper.properties
+|           
++---.settings
+|       .jsdtscope
+|       org.eclipse.core.resources.prefs
+|       org.eclipse.jdt.apt.core.prefs
+|       org.eclipse.jdt.core.prefs
+|       org.eclipse.m2e.core.prefs
+|       org.eclipse.wst.common.component
+|       org.eclipse.wst.common.project.facet.core.prefs.xml
+|       org.eclipse.wst.common.project.facet.core.xml
+|       org.eclipse.wst.jsdt.ui.superType.container
+|       org.eclipse.wst.jsdt.ui.superType.name
+|       org.eclipse.wst.validation.prefs
+|       org.hibernate.eclipse.console.prefs
+|       org.springframework.ide.eclipse.prefs
+|       
++---src
+|   +---main
+|   |   +---java
+|   |   |   \---com
+|   |   |       \---manager
+|   |   |           \---employees
+|   |   |               |   CustomCorsFilter.java
+|   |   |               |   EmployeesApplication.java
+|   |   |               |   FilterConfig.java
+|   |   |               |   ServletInitializer.java
+|   |   |               |   
+|   |   |               +---controller
+|   |   |               |       EmployeeController.java
+|   |   |               |       
+|   |   |               +---DTO
+|   |   |               |       CountryDTO.java
+|   |   |               |       DepartmentDTO.java
+|   |   |               |       EmployeeDTO.java
+|   |   |               |       JobDTO.java
+|   |   |               |       LocationDTO.java
+|   |   |               |       RegionDTO.java
+|   |   |               |       UserFilterDTO.java
+|   |   |               |       
+|   |   |               +---mapper
+|   |   |               |       CountryMapper.java
+|   |   |               |       DepartmentsMapper.java
+|   |   |               |       EmployeesMapper.java
+|   |   |               |       JobsMapper.java
+|   |   |               |       LocationsMapper.java
+|   |   |               |       RegionsMapper.java
+|   |   |               |       
+|   |   |               +---model
+|   |   |               |       Countries.java
+|   |   |               |       Departments.java
+|   |   |               |       Employees.java
+|   |   |               |       Jobs.java
+|   |   |               |       Locations.java
+|   |   |               |       Regions.java
+|   |   |               |       
+|   |   |               +---repo
+|   |   |               |   |   CountriesRepository.java
+|   |   |               |   |   DepartmentsRepository.java
+|   |   |               |   |   JobsRepository.java
+|   |   |               |   |   LocationsRepository.java
+|   |   |               |   |   RegionsRepository.java
+|   |   |               |   |   
+|   |   |               |   \---empRepo
+|   |   |               |           EmployeeRepositoryCustom.java
+|   |   |               |           EmployeeRepositoryCustomImpl.java
+|   |   |               |           EmployeesRepository.java
+|   |   |               |           
+|   |   |               \---service
+|   |   |                       EmployeesService.java
+|   |   |                       
+|   |   +---resources
+|   |   |   |   application.properties
+|   |   |   |   
+|   |   |   +---META-INF
+|   |   |   +---static
+|   |   |   \---templates
+|   |   \---webapp
+|   \---test
+|       \---java
+|           \---com
+|               \---manager
+|                   \---employees
+|                           EmployeesApplicationTests.java
+|                           
+\---target
+    +---classes
+    |   |   application.properties
+    |   |   
+    |   \---com
+    |       \---manager
+    |           \---employees
+    |               |   CustomCorsFilter.class
+    |               |   EmployeesApplication.class
+    |               |   FilterConfig.class
+    |               |   ServletInitializer.class
+    |               |   
+    |               +---controller
+    |               |       EmployeeController.class
+    |               |       
+    |               +---DTO
+    |               |       CountryDTO.class
+    |               |       DepartmentDTO.class
+    |               |       EmployeeDTO.class
+    |               |       JobDTO.class
+    |               |       LocationDTO.class
+    |               |       RegionDTO.class
+    |               |       UserFilterDTO.class
+    |               |       
+    |               +---mapper
+    |               |       CountryMapper.class
+    |               |       CountryMapperImpl.class
+    |               |       DepartmentsMapper.class
+    |               |       DepartmentsMapperImpl.class
+    |               |       EmployeesMapper.class
+    |               |       EmployeesMapperImpl.class
+    |               |       JobsMapper.class
+    |               |       JobsMapperImpl.class
+    |               |       LocationsMapper.class
+    |               |       LocationsMapperImpl.class
+    |               |       RegionsMapper.class
+    |               |       RegionsMapperImpl.class
+    |               |       
+    |               +---model
+    |               |       Countries.class
+    |               |       Departments.class
+    |               |       Employees.class
+    |               |       Jobs.class
+    |               |       Locations.class
+    |               |       Regions.class
+    |               |       
+    |               +---repo
+    |               |   |   CountriesRepository.class
+    |               |   |   DepartmentsRepository.class
+    |               |   |   JobsRepository.class
+    |               |   |   LocationsRepository.class
+    |               |   |   RegionsRepository.class
+    |               |   |   
+    |               |   \---empRepo
+    |               |           EmployeeRepositoryCustom.class
+    |               |           EmployeeRepositoryCustomImpl.class
+    |               |           EmployeesRepository.class
+    |               |           
+    |               \---service
+    |                       EmployeesService.class
+    |                       
+    +---generated-sources
+    |   \---annotations
+    |       \---com
+    |           \---manager
+    |               \---employees
+    |                   \---mapper
+    |                           CountryMapperImpl.java
+    |                           DepartmentsMapperImpl.java
+    |                           EmployeesMapperImpl.java
+    |                           JobsMapperImpl.java
+    |                           LocationsMapperImpl.java
+    |                           RegionsMapperImpl.java
+    |                           
+    +---generated-test-sources
+    |   \---test-annotations
+    +---m2e-wtp
+    |   \---web-resources
+    |       \---META-INF
+    |           |   MANIFEST.MF
+    |           |   
+    |           \---maven
+    |               \---com.manager
+    |                   \---employees
+    |                           pom.properties
+    |                           pom.xml
+    |                           
+    \---test-classes
+        \---com
+            \---manager
+                \---employees
+                        EmployeesApplicationTests.class
+                        

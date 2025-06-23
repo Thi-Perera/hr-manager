@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.manager.employees.DTO.CountryDTO;
 import com.manager.employees.DTO.DepartmentDTO;
 import com.manager.employees.DTO.EmployeeDTO;
@@ -52,8 +53,8 @@ public class EmployeeController {
 	}	
 	
 	@GetMapping("/departments")
-	public List<DepartmentDTO> getAllDeps() {
-		return empService.getAllDepartments();
+	public List<DepartmentDTO> getAllDeps() throws InterruptedException, JsonProcessingException {
+		return empService.getAllDepartmentsNoCache();
 	}
 	
 	@GetMapping("/jobs")

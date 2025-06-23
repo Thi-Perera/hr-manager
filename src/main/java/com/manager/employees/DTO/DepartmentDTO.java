@@ -1,6 +1,5 @@
 package com.manager.employees.DTO;
 
-
 public class DepartmentDTO {
 
     private Integer departmentId;
