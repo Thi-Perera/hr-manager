@@ -26,7 +26,7 @@ import com.manager.employees.service.EmployeesService;
 @RestController
 @RequestMapping("/api")
 public class EmployeeController {
-	
+
     @Autowired
     private EmployeesService empService;
 	
