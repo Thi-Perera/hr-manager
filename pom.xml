@@ -12,7 +12,7 @@
 	<groupId>com.manager</groupId>
 	<artifactId>employees</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>employees</name>
 	<description>Spring back-end for an employee manager interface in angular</description>
 	<url />
